@@ -1,0 +1,25 @@
+Port 2222
+ListenAddress 0.0.0.0
+
+PermitRootLogin no
+PasswordAuthentication yes
+KbdInteractiveAuthentication no
+PermitEmptyPasswords no
+UsePAM yes
+
+AllowUsers y4ss1n3 n0d4 boul3h14 gh3nj4
+
+X11Forwarding no
+AllowTcpForwarding no
+PermitTunnel no
+AllowAgentForwarding no
+PermitUserEnvironment no
+PrintMotd yes
+PrintLastLog no
+Banner /etc/issue.net
+MaxAuthTries 3
+LoginGraceTime 30
+MaxSessions 2
+MaxStartups 10:30:60
+
+Subsystem sftp /usr/lib/openssh/sftp-server

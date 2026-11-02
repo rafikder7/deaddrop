@@ -1,0 +1,43 @@
+name: "Rumor Mill #3 — Dead Drop"
+author: boul3h14
+series: Rumor
+series_no: 3
+slug: rumor-mill-3
+category: linux
+difficulty: hard
+points:
+  min: 400
+  max: 800
+flag_format: "ingehack{...}"
+flag: "ingehack{d34d_dr0ps_sp34k_l0ud3r_th4n_w0rds}"
+flag_fake: "ingehack{th1s_1s_4_f4k3_fl4g}"
+
+description: |
+  The rumor stopped being spoken and started being hidden. Three accounts, one
+  encrypted note, and a maintenance job that trusts whatever it finds in its
+  working directory. Follow it all the way to root.
+
+  Find the flag. Trust nothing until you've verified it.
+
+  **Connection (SSH, TTY required):**
+
+  ```sh
+  ssh -p 2222 y4ss1n3@<HOST>
+  ```
+
+  Password: `Welcome123`. A TTY is required — `su` prompts on the terminal,
+  so a raw `nc` session cannot complete the chain.
+
+  Flag format: `ingehack{...}`
+
+connection:
+  type: ssh
+  port: 2222
+  username: y4ss1n3
+  password: Welcome123
+  tty_required: true
+  instructions: |
+    Connect via SSH:
+      ssh y4ss1n3@<HOST> -p 2222
+    Password: Welcome123
+    (A TTY is required for su).
